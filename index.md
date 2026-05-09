@@ -1,46 +1,21 @@
 ---
-title: pcKakakuWatcher
+title: Development Track Record
 ---
 
-# pcKakakuWatcher
+# Development Track Record
 
-pcKakakuWatcher は、PCパーツと周辺機器の価格を定期的に取得し、価格確認と価格変動通知に利用する個人用ツールです。
+個人開発・技術検証・AI活用開発の記録です。
 
-このページは、楽天市場および Yahoo!ショッピングのアプリケーション登録向けに、アプリの用途と構成を説明するために公開しています。
+## Tools / Projects
 
-## 主な用途
+### pcKakakuWatcher
 
-- GPU、デスクトップPC、ディスプレイなどの価格を定期的に確認する
-- 条件に合う商品を抽出し、価格変動や通知対象を判定する
-- 取得結果を履歴として保存し、後から確認できるようにする
+PCパーツ・周辺機器の価格を定期的に取得し、価格変動や掘り出し物を検知する個人用ツール。
 
-## 取得する情報
+- .NET CLI
+- GitHub Actions
+- Neon / PostgreSQL
+- Discord Webhook
+- WPF管理ツール
 
-- 商品名
-- 商品URL
-- 価格
-- 商品カテゴリ
-- 取得日時
-- 通知判定に必要な仕様情報
-
-通知判定に必要な仕様情報には、GPU名、VRAM容量、画面サイズなどが含まれます。取得した商品情報は、価格確認、価格変動の監視、通知判定のためにのみ利用します。
-
-## 想定する取得元
-
-- 公開されているECサイトの商品ページ
-- 公開APIとして提供される商品検索サービス
-
-用途に応じて、楽天市場商品検索APIやYahoo!ショッピングAPIなどの公開APIを利用します。
-
-## 基盤構成
-
-- 実装: .NET の CLI アプリケーション
-- 実行方式: GitHub Actions による定期実行
-- データ保存: Neon / PostgreSQL
-- 通知: Discord Webhook
-- 設定管理: PostgreSQL 上の監視設定を読み込み
-- 管理ツール: WPF ベースの設定編集・観測結果確認ツール
-
-## 補足
-
-- 監視対象は公開されている商品情報です。
+[詳細を見る](./tools/pc-kakaku-watcher.md)
